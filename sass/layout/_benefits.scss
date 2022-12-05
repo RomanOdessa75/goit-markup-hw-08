@@ -1,9 +1,37 @@
+@media screen and (min-width: 1200px) {
+  .work-about {
+    padding-bottom: 0;
+  }
+}
+
 .benefits {
-  display: flex;
-  gap: 30px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // gap: 30px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 
   &__item {
-    width: 270px;
+    // width: 270px;
+    width: 450px;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -12,6 +40,10 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__text {

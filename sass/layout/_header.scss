@@ -16,9 +16,10 @@
 }
 
 .contacts-nav {
-  display: flex;
-  margin-left: auto;
-  color: var(--secondary-color);
+  // display: flex;
+  // margin-left: auto;
+  // color: var(--secondary-color);
+  display: none;
 
   & .item + .item {
     margin-left: 50px;
@@ -36,8 +37,9 @@
 }
 
 .site-nav {
-  display: flex;
-  margin-left: 93px;
+  // display: flex;
+  // margin-left: 93px;
+  display: none;
 
   & .item {
     margin-right: 50px;
