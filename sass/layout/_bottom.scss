@@ -5,7 +5,22 @@
 
   &-container {
     display: flex;
-    align-items: baseline;
+    // align-items: baseline;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      align-items: baseline;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: 1200px) {
+      align-items: baseline;
+    }
   }
 
   & .logo {
@@ -25,6 +40,13 @@
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+  }
+}
+
+.bottom-address-wrapper {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    margin-bottom: 60px;
   }
 }
 
@@ -57,7 +79,16 @@
   width: 206px;
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
+  // margin-left: 70px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .join-socials {
@@ -95,7 +126,18 @@
 }
 
 .bottom-form-wrap {
-  margin-left: 93px;
+  // margin-left: 93px;
+
+  @media screen and (max-width: 1199px) {
+    max-width: 455px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .bottom-form-title {
@@ -111,12 +153,21 @@
 .bottom-form {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  // gap: 12px;
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
 }
 
 .bottom-form-mail {
   background: transparent;
-  width: 358px;
+  // width: 358px;
+  width: 300px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -124,6 +175,10 @@
   padding: 15px 16px;
   color: var(--text-color-white);
   font-size: 16px;
+
+  @media screen and (min-width: 480px) {
+    width: 358px;
+  }
 }
 
 .bottom-form-mail::placeholder {

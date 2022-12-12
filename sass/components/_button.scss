@@ -2,7 +2,8 @@
   display: inline-block;
   border: 1px solid transparent;
   padding: 10px 32px;
-  min-width: 216px;
+  // min-width: 216px;
+  min-width: 200px;
   min-height: 50px;
 
   font-family: inherit;
@@ -17,5 +18,11 @@
 
   &:hover {
     background: #188ce8;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button {
+    min-width: 216px;
   }
 }
